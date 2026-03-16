@@ -1,0 +1,6 @@
+faiss_index/
+venv/
+__pycache__/
+*.pyc
+.env
+contracts/*.pdf
