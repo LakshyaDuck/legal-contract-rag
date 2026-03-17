@@ -9,6 +9,14 @@ A RAG (Retrieval-Augmented Generation) system that answers questions about emplo
 - Generates natural language answers with source citations
 - Runs entirely locally (no API keys required)
 
+## Demo
+
+### Interface
+![Query Interface](screenshots/interface.png)
+
+### Example Output
+![Answer with Sources](screenshots/result.png)
+
 ## Architecture
 ```
 PDF Contracts
