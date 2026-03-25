@@ -19,21 +19,17 @@ A RAG (Retrieval-Augmented Generation) system that answers questions about emplo
 
 ## Architecture
 ```
-PDF Contracts
+User uploads PDF
     ↓
-PDF Loader (PyPDF)
+ingestion.py: Extract text, chunk, embed
     ↓
-Text Chunking (1000 chars, 200 overlap)
+FAISS index stored per session
     ↓
-Embeddings (all-MiniLM-L6-v2)
+User asks question
     ↓
-Vector Store (FAISS)
+engine.py: Embed query → retrieve chunks → LLM generates answer
     ↓
-Semantic Retrieval (top 3 chunks)
-    ↓
-LLM Generation (Llama 3.2 3B via Ollama)
-    ↓
-Answer + Sources
+app.py: Display with sources
 ```
 
 **Tech Stack:**
